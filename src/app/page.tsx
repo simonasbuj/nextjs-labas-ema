@@ -19,9 +19,16 @@ export default function Home() {
     console.log(`New Position: Top ${randomTop}px, Left ${randomLeft}px`)
   }
 
-  const recordAnswer = () => {
+  const recordAnswer = async () => {
     setText("Our customer support representatives will contact you shortly")
     setIsAnswered(true)
+
+    await fetch("/api/answer", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
   }
 
   return (
