@@ -1,7 +1,7 @@
 'use client'
 
 import Question from "@/components/question";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [position, setPosition] = useState({ top: 100, left: 100 })
@@ -31,9 +31,29 @@ export default function Home() {
     })
   }
 
+  // useEffect to make an API call when the page is opened
+  useEffect(() => {
+    const recordPageOpen = async () => {
+      try {
+        await fetch("/api/page-open", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          }
+        });
+      } catch (error) {
+        console.error("Failed to record page open:", error);
+      }
+    };
+
+    recordPageOpen();
+  }, []); // Empty dependency array ensures this runs only once when the page loads
+
+
   return (
     <div className="
-      min-h-screen flex h-full flex-col items-center justify-center bg-linear-to-tr from-pink-400 via-pink-400 to-pink-200
+      min-h-screen flex h-full flex-col items-center justify-center 
+      bg-linear-to-tr from-pink-400 via-pink-400 to-pink-200
     ">
       <main >
         <Question question={text}/>

@@ -8,6 +8,13 @@
       "when": 1743964447078,
       "tag": "0000_supreme_vulture",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1743967571997,
+      "tag": "0001_friendly_nocturne",
+      "breakpoints": true
     }
   ]
 }
