@@ -7,7 +7,7 @@ export default function Home() {
   const [position, setPosition] = useState({ top: 100, left: 100 })
   const [wasHovered, setWasHovered] = useState(false)
 
-  const [text, setText] = useState("My question is with alot of words that span in multiple lines?")
+  const [text, setText] = useState("Ar norėtum būti mano mergina? 😊")
   const [isAnswered, setIsAnswered] = useState(false)
 
   const moveButton = () => {
@@ -20,7 +20,7 @@ export default function Home() {
   }
 
   const recordAnswer = async () => {
-    setText("Our customer support representatives will contact you shortly")
+    setText("Let's GOOOOOOO!! 🥰🥰 Aš įtariau, bet pasirodo negalėjau net įsivaizduoti ant kiek gera su tavim bendrauti ir leisti laiką kartu 😊😊")
     setIsAnswered(true)
 
     await fetch("/api/answer", {
