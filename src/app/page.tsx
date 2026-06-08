@@ -20,7 +20,7 @@ export default function Home() {
   }
 
   const recordAnswer = async () => {
-    setText("Let's GOOOOOOO!! 🥰🥰 Aš įtariau, bet pasirodo negalėjau net įsivaizduoti ant kiek gera su tavim bendrauti ir leisti laiką kartu 😊😊")
+    setText("Let's GOOOOOOO!! 🥰🥰\n Aš įtariau, bet pasirodo negalėjau net įsivaizduoti ant kiek gera su tavim bendrauti ir leisti laiką kartu. 😊😊\n Tu esi NUOSTABI!! 😘😘")
     setIsAnswered(true)
 
     await fetch("/api/answer", {

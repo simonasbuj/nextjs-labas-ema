@@ -6,6 +6,6 @@ interface QuestionProps {
 
 export default function Question({ question }: QuestionProps) {
   return (
-    <div className='text-white text-4xl text-center mb-10 font-medium'>{question}</div>
+    <div className='text-white text-4xl text-center mb-10 font-medium whitespace-pre-line'>{question}</div>
   )
 }
